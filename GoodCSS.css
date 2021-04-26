@@ -1,0 +1,128 @@
+/*w3schools was really good about all of this,
+ * they provided examples,
+ * code,
+ * and more. Check them out!
+*/
+/*https://stackoverflow.com/a/2237896/9654083*/
+@font-face {
+    font-family: "Ubuntu Light";
+    src: local("Ubuntu Light"), local("Ubuntu"),
+        url("https://raw.githubusercontent.com/earaujoassis/ubuntu-fontface/master/fonts/ubuntu-light-webfont.woff2"),
+        url("https://raw.githubusercontent.com/earaujoassis/ubuntu-fontface/master/fonts/ubuntu-light-webfont.woff"),
+        url("https://raw.githubusercontent.com/earaujoassis/ubuntu-fontface/master/fonts/ubuntu-light-webfont.ttf");
+}
+/*TODO: Find a way to do this with CSS2, for older browsers*/
+.goodText { font-family: "Ubuntu Light",Verdana; }
+
+.wideButtonMain, .wideButtonBlue, .wideButtonGrey {
+    border-radius:4px;
+    width:100px;
+    height:35px;
+}
+.wideButtonBlue {
+    border:solid 2px blue;
+    background-color:aqua;
+}
+
+.goodButtonMain:active, .goodGreenButton, .goodRedButton {
+    border-radius:4px;
+    /*padding:10px 15px;*/
+    width:70px;
+    height:50px;
+}
+.goodGreenButton {
+    /*color: green;*/
+    background-color:green;
+    border:2px solid darkgreen;
+}
+.goodGreenButtonAnimations {
+    animation-name:greencycle2;
+    animation-iteration-count:infinite;
+    animation-duration:10s;
+}
+.goodRedButton{
+    background-color:red;
+    /*border:2px solid darkred;*/
+    border:2px solid crimson;
+}
+.goodRedButtonAnimations {
+    animation-name:redcycle2;
+    animation-iteration-count:infinite;
+    animation-duration:10s;
+}
+.goodButtonMain, .goodGreenButton:active, .goodRedButton:active {
+    box-shadow: 0 5px #666;
+    transform:translateY(2px);
+}
+.goodGreenButtonAnimations:active {
+  background-color: lightgreen;
+  animation-name:greencycle;
+  animation-iteration-count:infinite;
+  animation-duration:4s;
+}
+.goodRedButtonAnimations:active {
+  background-color: crimson;
+  animation-name: redcycle;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+@keyframes redcycle {
+  0% {background-color: red;}
+  20%{background-color:salmon;}
+  50% {background-color: darkred;}
+  69% {background-color: crimson;}
+  70% {background-color:darkred;}
+  80% {background-color:firebrick}
+  100% {background-color:red}
+}
+@keyframes redcycle2 {
+    1% {background-color:red;transform:translateY(-2px);}
+    20%{background-color:darksalmon;}
+    50%{background-color:firebrick;}
+    70%{background-color:crimson;}
+    75%{border-color:darksalmon;transform:translateY(-2px);}
+    78%{border-color:crimson;}
+    80%{background-color:red;}
+    99%{background-color:firebrick;}
+}
+@keyframes greencycle {
+    0% {background-color:green;}
+    50%{background-color:darkgreen;}
+    70%{background-color:limegreen;}
+    80%{background-color:palegreen;}
+    90%{background-color:forestgreen;}
+    100%{background-color:green;}
+}
+@keyframes greencycle2 {
+    0%{background-color:green;}
+    20%{background-color:limegreen;}
+    30%{background-color:forestgreen;}
+    40%{background-color:palegreen;}
+    50%{background-color:green;}
+    70%{background-color:darkolivegreen;}
+    72%{background-color:seagreen;}
+    95%{background-color:mediumspringgreen;}
+    100%{background-color:green;}
+}
+/*https://stackoverflow.com/a/12851024/9654083*/
+.inCont {
+    display:none;
+}
+#cb1cover {
+    display:none;
+}
+#cb1:checked ~ .cont0 {
+    pointer-events:none;
+}
+#cb1:checked ~ #cb1cover {
+    display:;
+}
+#cb1:checked ~ #cb1 {
+    pointer-events:none;
+}
+#cb1:checked ~ .inCont {
+    display: block;
+}
+#cb1 {
+    display:none;
+}
