@@ -4,6 +4,9 @@
  * and more. Check them out!
 */
 /*https://stackoverflow.com/a/2237896/9654083*/
+form {
+    display:inline;
+}
 @font-face {
     font-family: "Ubuntu Light";
     src: local("Ubuntu Light"), local("Ubuntu"),
@@ -29,6 +32,7 @@
     /*padding:10px 15px;*/
     width:70px;
     height:50px;
+    font-size:40px;
 }
 .goodGreenButton {
     /*color: green;*/
@@ -103,26 +107,4 @@
     72%{background-color:seagreen;}
     95%{background-color:mediumspringgreen;}
     100%{background-color:green;}
-}
-/*https://stackoverflow.com/a/12851024/9654083*/
-.inCont {
-    display:none;
-}
-#cb1cover {
-    display:none;
-}
-#cb1:checked ~ .cont0 {
-    pointer-events:none;
-}
-#cb1:checked ~ #cb1cover {
-    display:;
-}
-#cb1:checked ~ #cb1 {
-    pointer-events:none;
-}
-#cb1:checked ~ .inCont {
-    display: block;
-}
-#cb1 {
-    display:none;
 }
