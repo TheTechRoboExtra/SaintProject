@@ -15,7 +15,7 @@ form {
         url("https://raw.githubusercontent.com/earaujoassis/ubuntu-fontface/master/fonts/ubuntu-light-webfont.ttf");
 }
 /*TODO: Find a way to do this with CSS2, for older browsers*/
-.goodText { font-family: "Ubuntu Light",Verdana; }
+.goodText { font-family: "Ubuntu Light",Verdana;font-size:17px; }
 
 .wideButtonMain, .wideButtonBlue, .wideButtonGrey {
     border-radius:4px;
